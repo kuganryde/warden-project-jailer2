@@ -18,3 +18,11 @@ If a model fails to load, the game falls back to its built-in procedural charact
 ## Phones and tablets
 Touch controls turn on automatically on phones and iPads (Settings has Auto, Always on, Off). Landscape is required.
 On iPhone or iPad use Share, then Add to Home Screen for a full-screen app. All music is generated in the browser. The game makes no external network requests.
+
+## CrazyGames readiness
+- Original assets only (procedural characters, vehicles, textures; the third-party soldier GLB is disabled via `USE_GLB = false`).
+- SDK v3 wired (`Gameplay start/stop`, `Loading start/stop`, `happytime`, midgame ad at natural break, Data module for best score, mute-audio setting). Every call is a no-op off-platform.
+- On the platform (or with `?cg=1`) the title card is skipped: one click on Play lands in gameplay.
+- No custom fullscreen button, no external links, no cross-promotion, English only, PEGI 12 style (non-gory impacts).
+- Initial download about 6 MB, 60 files, relative paths only.
+- HUD verified legible at 800x450 (DPR 1) and on phone landscape; physics are delta-time based (frame-rate independent).
